@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Bundle</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <!-- Event Handling Section -->
+    <button id="clickMe">Click Me!</button>
+    <div id="hoverBox">Hover Over Me!</div>
+    <input type="text" id="keyInput" placeholder="Press a key!">
+    <div id="secret">🤫 Double-click or hold for 2s!</div>
+
+    <!-- Interactive Elements -->
+    <button id="textColorChanger">Click Me to Change Text and Color</button>
+
+    <div class="gallery">
+        <img src="images/image1.jpg" class="active">
+        <img src="images/image2.jpg">
+        <img src="images/image3.jpg">
+        <button id="prevBtn">←</button>
+        <button id="nextBtn">→</button>
+    </div>
+
+    <div class="tabs">
+        <button class="tab" data-tab="tab1">Tab 1</button>
+        <button class="tab" data-tab="tab2">Tab 2</button>
+        <div id="tab1" class="tab-content active">Content 1</div>
+        <div id="tab2" class="tab-content">Content 2</div>
+    </div>
+
+    <!-- Form Validation -->
+    <form id="signupForm">
+        <input type="text" id="username" placeholder="Username (required)" required>
+        <span id="usernameError" class="error"></span>
+    
+        <input type="email" id="email" placeholder="Email (e.g., user@example.com)">
+        <span id="emailError" class="error"></span>
+    
+        <input type="password" id="password" placeholder="Password (min 8 characters)">
+        <span id="passwordError" class="error"></span>
+    
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

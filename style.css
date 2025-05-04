@@ -1,0 +1,143 @@
+/* Center all elements */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Buttons and inputs styling */
+button, input {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #007BFF;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.9s ease;
+}
+
+button:hover, input:focus {
+    background-color: #007BFF;
+    color: white;
+    outline: none;
+    border-color: #0056b3;
+}
+
+/* Gallery Container */
+.gallery {
+    position: relative;
+    margin: 20px auto;
+    max-width: 600px; /* Center the gallery and limit its width */
+    text-align: center; /* Center-align the buttons */
+}
+
+/* Gallery Images */
+.gallery img {
+    display: none;
+    width: 100%; /* Make the image responsive */
+    max-width: 600px; /* Limit the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers its container */
+    transition: transform 0.3s ease, opacity 0.5s;
+}
+
+.gallery img.active {
+    display: block;
+    opacity: 1;
+    margin: 0 auto; /* Center the image */
+}
+
+.gallery img.enlarged {
+    transform: scale(1.5); /* Enlarge the image */
+    z-index: 10;
+    position: relative;
+    cursor: zoom-out;
+}
+
+/* Navigation Buttons */
+#prevBtn, #nextBtn {
+    position: absolute;
+    top: 50%; /* Vertically center the buttons */
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+#prevBtn:hover, #nextBtn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#prevBtn {
+    left: 10px; /* Position the left button closer to the image */
+}
+
+#nextBtn {
+    right: 10px; /* Position the right button closer to the image */
+}
+
+/* Tabs styling */
+.tabs {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.tab {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #007BFF;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
